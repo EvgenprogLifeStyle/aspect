@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('components/head.html', { "title":"Сброс пароля" })
+    <body>
+        <div class="wrapper sign">
+            <div class="container flex ch">
+                <div class="sign__wrap">
+                    <div class="sign__title center">Сброс пароля</div>
+                    <form id="reset-password-form" method="POST" class="form-signin">
+                        <div class="input-box">
+                            <input type="email" class="input" id="reset-password-form-email" placeholder="Адрес электронной почты" required="" autofocus="" />
+                        </div>
+
+                        <button id="reset-password-form-submit" class="form-signin__btn" type="submit">Сбросить пароль</button>
+                        <div class="form-signin__row flex cv sb">
+                            <a href="#">Войти</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            @@include('components/footer/footer.html', {display:'none'})
+            <script>
+                function validateEmail(email) {
+                    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    return re.test(String(email).toLowerCase());
+                }
+                function check_password_reset() {
+                    if (!validateEmail($("#reset-password-form-email").val())) {
+                        $("#reset-password-form-submit").attr("disabled", "disabled");
+                        $("#reset-password-form-submit").addClass("button-disbaled");
+                    } else {
+                        $("#reset-password-form-submit").removeAttr("disabled");
+                        $("#reset-password-form-submit").removeClass("button-disbaled");
+                    }
+                }
+
+                $("#reset-password-form-email").keypress(function () {
+                    check_password_reset();
+                });
+
+                $("#reset-password-form-email").keyup(function () {
+                    check_password_reset();
+                });
+
+                check_password_reset();
+            </script>
+        </div>
+    </body>
+</html>

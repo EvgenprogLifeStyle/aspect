@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('components/head.html', { "title":"Авторизация" })
+    <body>
+        <div class="wrapper sign">
+            <div class="container flex ch">
+                <div class="sign__wrap">
+                    <div class="sign__title center">Вход</div>
+                    <form method="POST" class="form-signin">
+                        <div class="input-box">
+                            <input type="text" class="input" placeholder="Адрес электронной почты" required="" autofocus="" />
+                        </div>
+                        <div class="input-box">
+                            <input type="password" class="input" placeholder="Пароль" required="" />
+                        </div>
+
+                        <button class="form-signin__btn" type="submit">Войти</button>
+                        <div class="form-signin__row flex cv sb">
+                            <a href="#">Забыли пароль?</a>
+                            <a href="#">Регистрация</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            @@include('components/footer/footer.html', {display:'none'})
+        </div>
+    </body>
+</html>

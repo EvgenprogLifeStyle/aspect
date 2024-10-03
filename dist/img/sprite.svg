@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+	<symbol id="search" viewBox="0 0 37.06 38.06">
+		<defs>
+			<style>
+				.cls-1 {
+				fill-rule: evenodd;
+				}
+			</style>
+		</defs>
+		<path class="cls-1" d="M15 0A15 15 0 1 1 0 15 15.005 15.005 0 0 1 15 0zm0 2A13 13 0 1 1 2 15 13 13 0 0 1 15 2z" />
+		<path class="cls-1" d="M23.93 26.34l1.41-1.41 11.73 11.73-1.41 1.41z" />
+	</symbol>
+</svg>

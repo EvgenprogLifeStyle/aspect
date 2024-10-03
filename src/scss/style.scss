@@ -1,0 +1,188 @@
+@use "sass:math";
+@import "fonts";
+// <НАСТРОЙКИ> ===============================================================================================================================================================================================================================================================================================
+$fontFamily: "Tenor Sans";
+$fontSize: 16;
+$mainColor: #1a1a1a;
+$maxWidthContainer: 1140px;
+@import "base/base";
+// </НАСТРОЙКИ> ===============================================================================================================================================================================================================================================================================================
+
+body {
+    color: $mainColor;
+    font-size: 1rem;
+    // line-height: math.div(24, $fontSize);
+    font-family: $fontFamily, sans-serif;
+    line-height: 1.5;
+    background-color: #f3f4f1;
+
+    // Скролл заблокирован
+    &._lock {
+        overflow: hidden;
+        touch-action: none;
+    }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+// Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    >main {
+        overflow: hidden;
+        flex: 1 1 auto;
+        margin-bottom: 10vh;
+    }
+
+    // Фикс для слайдеров
+    >* {
+        min-width: 0;
+    }
+}
+
+//<ОСНОВНАЯ СЕТКА>============================================================================================================================
+.container {
+    max-width: $maxWidthContainer;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+
+    @media (min-width: 576px) {
+        max-width: 540px;
+    }
+
+    @media (min-width: 768px) {
+        max-width: 720px;
+    }
+
+    @media (min-width: 992px) {
+        max-width: 960px;
+    }
+
+
+    @media (min-width: 1200px) {
+        max-width: $maxWidthContainer;
+    }
+
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.content {
+
+
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    h3 {
+        padding-top: 0.7em;
+        font-size: 1.3rem;
+    }
+
+    h4 {
+        padding-top: 0.7em;
+        font-size: 1.2rem;
+    }
+
+    ul {
+        margin-bottom: 1rem;
+        display: block;
+        list-style-type: disc;
+        padding-inline-start: 40px;
+
+        li {
+            list-style-type: disc;
+        }
+
+        li::marker {
+            unicode-bidi: isolate;
+            font-variant-numeric: tabular-nums;
+            text-transform: none;
+
+        }
+    }
+
+    p {
+        margin-bottom: 1rem;
+    }
+
+    a.phone {
+        color: rgba(0, 0, 0, .9);
+        font-family: Arial;
+        text-decoration: none;
+    }
+
+    a {
+        color: #000;
+        text-decoration: underline;
+
+    }
+}
+
+.home {
+    margin-top: 50px;
+
+    @include sm {
+        margin-top: 24px;
+    }
+}
+
+.agr,
+.back,
+.terms,
+.contact,
+.delivery,
+.pay {
+    margin-top: 142px;
+
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+
+        @include sm {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+
+//</ОСНОВНАЯ СЕТКА>============================================================================================================================
+
+// Компоненты
+@import "../components/header/header";
+@import "../components/footer/footer";
+// @import "../components/tabs/tabs";
+
+// Подключение стилей отдельных страниц
+@import "./pages/main";
+@import "./pages/catalog";
+@import "./pages/search";
+@import "./pages/profile";
+@import "./pages/card";
+@import "./pages/basket";
+@import "./pages/sign";

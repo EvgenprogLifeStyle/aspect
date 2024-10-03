@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('components/head.html', { "title":"Главная" })
+    <body>
+        <div class="wrapper">
+            @@include('components/header/header.html', {})
+
+            <main class="home">
+                <div class="intro-bg">
+                    <img src="@img/intro-bg-nome.png" class="desktop" alt="intro-bg-nome" />
+                    <img src="@img/intro-bg-nome_phone.png" class="phone" alt="intro-bg-nome" />
+                </div>
+                <div class="catalog-home container">
+                    <h2 class="subtitle">NEW</h2>
+                    <div class="catalog-home__list w3 flex fw">
+                        <div class="cart-product">
+                            <div class="cart-product__top">
+                                <a href="#" class="cart-product__img">
+                                    <img src="@img/product/pic_360x460.png" class="img-origin bg-i" alt="product-img" style="background-image: url('img/product/01.jpg')" />
+                                    <img src="@img/product/pic_360x460.png" class="img-origin img-origin_hover bg-i" alt="product-img" style="background-image: url('img/product/01_h.jpg')" />
+                                </a>
+                                <button class="cart-product__favorites"></button>
+                            </div>
+                            <div class="cart-product__body flex dc">
+                                <a href="#" class="cart-product__name">Куртка из натуральной кожи черного цвета</a>
+                                <div class="cart-product__price">89 900 руб.</div>
+                            </div>
+                        </div>
+                        <div class="cart-product">
+                            <div class="cart-product__top">
+                                <a href="#" class="cart-product__img">
+                                    <img src="@img/product/pic_360x460.png" class="img-origin bg-i" alt="product-img" style="background-image: url('img/product/02.jpg')" />
+                                    <img src="@img/product/pic_360x460.png" class="img-origin img-origin_hover bg-i" alt="product-img" style="background-image: url('img/product/02_h.jpg')" />
+                                </a>
+                                <button class="cart-product__favorites"></button>
+                            </div>
+                            <div class="cart-product__body flex dc">
+                                <a href="#" class="cart-product__name">Брюки из натуральной кожи черного цвета</a>
+                                <div class="cart-product__price">45 900 руб.</div>
+                            </div>
+                        </div>
+                        <div class="cart-product">
+                            <div class="cart-product__top">
+                                <a href="#" class="cart-product__img">
+                                    <img src="@img/product/pic_360x460.png" class="img-origin bg-i" alt="product-img" style="background-image: url('img/product/03.jpg')" />
+                                    <img src="@img/product/pic_360x460.png" class="img-origin img-origin_hover bg-i" alt="product-img" style="background-image: url('img/product/03_h.jpg')" />
+                                </a>
+                                <button class="cart-product__favorites"></button>
+                            </div>
+                            <div class="cart-product__body flex dc">
+                                <a href="#" class="cart-product__name">Шорты из натуральной кожи черного цвета</a>
+                                <div class="cart-product__price">45 900 руб.</div>
+                            </div>
+                        </div>
+                        <div class="cart-product">
+                            <div class="cart-product__top">
+                                <a href="#" class="cart-product__img">
+                                    <img src="@img/product/pic_360x460.png" class="img-origin bg-i" alt="product-img" style="background-image: url('img/product/03.jpg')" />
+                                    <img src="@img/product/pic_360x460.png" class="img-origin img-origin_hover bg-i" alt="product-img" style="background-image: url('img/product/03_h.jpg')" />
+                                </a>
+                                <button class="cart-product__favorites"></button>
+                            </div>
+                            <div class="cart-product__body flex dc">
+                                <a href="#" class="cart-product__name">Шорты из натуральной кожи черного цвета</a>
+                                <div class="cart-product__price">45 900 руб.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            @@include('components/footer/footer.html', {})
+        </div>
+    </body>
+</html>

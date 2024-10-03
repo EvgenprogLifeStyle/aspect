@@ -1,0 +1,17 @@
+/* tenor-sans-regular - cyrillic_latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Tenor Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/tenor-sans-v17-cyrillic_latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: url('../fonts/ArialMT.woff2') format('woff2'),
+        url('../fonts/ArialMT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

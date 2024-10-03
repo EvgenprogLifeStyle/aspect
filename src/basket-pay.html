@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('components/head.html', { "title":"Корзина" })
+    <body>
+        <div class="wrapper">
+            @@include('components/header/header.html', {})
+
+            <main>
+                <div class="container">
+                    <div class="wishlist-top _center">
+                        <h1>КОРЗИНА</h1>
+                    </div>
+                    <div class="basket">
+                        <div class="basket__product">
+                            <table class="table">
+                                <tbody>
+                                    <tr class="basket-product">
+                                        <td style="width: 124px">
+                                            <img src="img/product/01.jpg" alt="01" />
+                                        </td>
+                                        <td style="width: 50%">
+                                            <p><a href="/product/275">Куртка из натуральной кожи черного цвета</a></p>
+                                            <span style="color: #bbb">арт. 2202231</span>
+                                        </td>
+                                        <td class="center" style="min-width: 60px">
+                                            <div>Черный</div>
+                                        </td>
+                                        <td>
+                                            <div>XS</div>
+                                        </td>
+                                        <td class="price" style="min-width: 120px">89 900 руб.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="total">
+                            <div class="total__item">
+                                <div>ФИО</div>
+                                <div>Романенко</div>
+                            </div>
+                            <div class="total__item">
+                                <div>Телефон</div>
+                                <div>+37525817824</div>
+                            </div>
+                            <div class="total__item">
+                                <div>Способ оплаты</div>
+                                <div>Картой на сайте</div>
+                            </div>
+                            <div class="total__item">
+                                <div>Адрес</div>
+                                <div>Кричев</div>
+                            </div>
+                            <div class="total__item">
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="total__price right">ИТОГО: 114 800 руб.</div>
+                            <div class="right">
+                                <button class="total__btn">Оплатить картой</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            @@include('components/footer/footer.html', {})
+            <!-- <script src="js/libs/bootstrap-select.min.js"></script> -->
+        </div>
+    </body>
+</html>

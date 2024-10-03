@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('components/head.html', { "title":"Профиль" })
+    <body>
+        <div class="wrapper">
+            @@include('components/header/header.html', {})
+
+            <main>
+                <div class="profile container mt_72">
+                    <div class="profile__wrap flex">
+                        <div class="profile__data">
+                            <div class="profile__form">
+                                <div class="profile__top">
+                                    <h2>Личный кабинет</h2>
+                                </div>
+                                <div class="profile__signout right">
+                                    <a href="/account/signout">Выйти</a>
+                                </div>
+
+                                <form class="form-profile form-profile_data">
+                                    <div class="form-profile__item">
+                                        <div class="form-profile__name">Имя</div>
+                                        <input name="username" value="test" type="text" class="form-profile__input" />
+                                    </div>
+                                    <div class="form-profile__item">
+                                        <div class="form-profile__name">Фамилия</div>
+                                        <input name="last_name" value="" type="text" class="form-profile__input" />
+                                    </div>
+                                    <div class="form-profile__item">
+                                        <div class="form-profile__name">Логин/Email</div>
+                                        <input disabled="disabled" value="ahoyc@mailto.plus" type="email" class="form-profile__input" />
+                                    </div>
+                                    <div class="form-profile__item">
+                                        <div class="form-profile__name">Дата рождения</div>
+                                        <input type="text" value="" class="datepicker form-profile__input" />
+                                    </div>
+                                    <div class="form-profile__item">
+                                        <button type="submit" class="btn"><i class="fa fa-check"></i> Сохранить</button>
+                                    </div>
+                                </form>
+                                <form class="form-profile form-profile_login">
+                                    <div class="form-profile__item">
+                                        <div class="form-profile__name">ПАРОЛЬ</div>
+                                        <input name="username" type="password" class="form-profile__input" />
+                                    </div>
+                                    <div class="form-profile__item">
+                                        <div class="form-profile__name">НОВЫЙ ПАРОЛЬ</div>
+                                        <input name="last_name" type="password" class="form-profile__input" />
+                                    </div>
+                                    <div class="form-profile__item">
+                                        <div class="form-profile__name">ПОВТОР ПАРОЛЯ</div>
+                                        <input disabled="disabled" type="password" class="form-profile__input" />
+                                    </div>
+
+                                    <div class="form-profile__item">
+                                        <button type="submit" class="btn"><i class="fa fa-check"></i> Сохранить</button>
+                                    </div>
+                                </form>
+
+                                <form class="form-profile form-profile_login">
+                                    <div class="profile__top">
+                                        <h2>АДРЕС ДОСТАВКИ</h2>
+                                    </div>
+                                    <div class="form-profile__item">
+                                        <div class="form-profile__name">ФИО</div>
+                                        <input name="fio" value="test " type="text" class="form-profile__input" />
+                                    </div>
+                                    <div class="form-profile__item">
+                                        <div class="form-profile__name">ТЕЛЕФОН</div>
+                                        <input name="phone" type="text" class="form-profile__input phone" placeholder="+7 (___) ___-____" />
+                                    </div>
+                                    <div class="form-profile__item">
+                                        <div class="form-profile__name">Город</div>
+                                        <input type="text" class="form-profile__input" />
+                                    </div>
+                                    <div class="form-profile__item">
+                                        <div class="form-profile__name">Индекс</div>
+                                        <input name="index" value="" type="text" class="form-profile__input" />
+                                    </div>
+                                    <div class="form-profile__item">
+                                        <div class="form-profile__name">АДРЕС</div>
+                                        <input name="address" value="" type="text" class="form-profile__input" placeholder="улица, дом, квартира" />
+                                    </div>
+
+                                    <div class="form-profile__item">
+                                        <button type="submit" class="btn"><i class="fa fa-check"></i> Сохранить</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="profile__order">
+                            <div class="profile__top">
+                                <h2>ИСТОРИЯ ЗАКАЗОВ</h2>
+                            </div>
+                            <div class="profile__table-wrap">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="/order/9498">#9498</a></td>
+                                            <td>94&nbsp;890 руб.</td>
+                                            <td>1 изделия</td>
+                                            <td>новый</td>
+                                            <td>05:58 11.08.23</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            @@include('components/footer/footer.html', {})
+            <script src="js/libs/bootstrap-datepicker.min.js"></script>
+            <script src="js/libs/bootstrap-datepicker.ru.min.js"></script>
+            <script src="js/libs/maskedinput.min.js"></script>
+        </div>
+    </body>
+</html>

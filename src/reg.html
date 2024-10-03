@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('components/head.html', { "title":"Регистрация" })
+    <body>
+        <div class="wrapper sign">
+            <div class="container flex ch">
+                <div class="sign__wrap">
+                    <div class="sign__title center">Регистрация</div>
+                    <form id="register-account" method="POST" class="form-signin">
+                        <div class="input-box">
+                            <input type="text" class="input" id="username" placeholder="Имя" required="" autofocus="" />
+                        </div>
+                        <div class="input-box">
+                            <input type="email" class="input" id="email" placeholder="Адрес электронной почты" required="" />
+                        </div>
+                        <hr />
+                        <div class="input-box">
+                            <input type="password" id="password" class="input" placeholder="Пароль" required="" />
+                        </div>
+                        <div class="input-box">
+                            <input type="password" id="password_repeat" class="input" placeholder="Повтор пароля" required="" />
+                        </div>
+                        <div class="custom-control right">
+                            <input type="checkbox" class="custom-control-input" id="id_user_agreement" />
+                            <label class="custom-control-label" for="id_user_agreement">Принимаю <a href="/agreement" target="_blank"> политику конфиденциальности</a>.</label>
+                        </div>
+                        <button id="register-form-submit" class="form-signin__btn" type="submit" disabled="disabled">Регистрация</button>
+                        <div class="form-signin__row flex cv sb">
+                            <a href="#">Забыли пароль?</a>
+                            <a href="#">Регистрация</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            @@include('components/footer/footer.html', {display:'none'})
+            <script>
+                $(document).ready(function () {
+                    function check_register_form() {
+                        if (!$("#id_user_agreement").is(":checked") || $("#password_repeat").val().length <= 1 || $("#password").val().length <= 1 || $("#username").val().length == 0 || $("#email").val().length == 0) {
+                            $("#register-form-submit").attr("disabled", "disabled");
+                            $("#register-form-submit").addClass("button-disbaled");
+                        } else {
+                            $("#register-form-submit").removeAttr("disabled");
+                            $("#register-form-submit").removeClass("button-disbaled");
+                        }
+                    }
+
+                    $("#register-account").keypress(function (e) {
+                        check_register_form();
+                    });
+
+                    $("#register-account").keyup(function (e) {
+                        check_register_form();
+                    });
+
+                    $("#id_user_agreement").change(function (e) {
+                        check_register_form();
+                    });
+
+                    check_register_form();
+                });
+            </script>
+        </div>
+    </body>
+</html>
